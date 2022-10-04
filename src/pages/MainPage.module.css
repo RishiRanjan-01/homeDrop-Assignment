@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  height: max-content;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  background-color: #e2e8f0;
+}
+
+/* Productbox */
+.ProductsBox {
+  width: 83%;
+  height: max-content;
+  
+  /* border: 1px solid red; */
+}
+
+.AddProduct {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.AddProduct p {
+  width: 105px;
+  height: 28px;
+  left: 0px;
+  top: 10px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  /* identical to box height, or 117% */
+
+  /* grey/800 */
+
+  color: #1e293b;
+}
+
+.AddProduct button {
+  flex-direction: row;
+  padding: 6px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #3b82f6;
+  border-radius: 4px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  border: none;
+  color: #ffffff;
+}
+
+/* containtBox */
+.containtBox {
+  height: 89vh;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 1.2rem;
+  overflow-y: scroll;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+}
+
+.topbox {
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid rgb(199, 195, 195);
+  /* opacity: 0.5; */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bredcum {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  text-decoration: none;
+}
+.bredcum p a {
+  text-decoration: none;
+  width: 54px;
+  height: 22px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height, or 122% */
+
+  /* grey/600 */
+
+  color: #475569;
+}
+.bredcum p:nth-child(1) a {
+  color: #2d68fe;
+  text-decoration: underline;
+}
+.bredcum p a:hover {
+  color: #2d68fe;
+  text-decoration: underline;
+}
+
+/* sortBox */
+.sortBox {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+.sortBox p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+
+  /* gray/700 */
+
+  color: #334155;
+}
+
+/* sortIcon */
+.sortIcon {
+  display: flex;
+  border: 1px solid rgb(186, 179, 179);
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #334155;
+  border-radius: 4px;
+}
+
+/* filerBox */
+.filerBox {
+  width: 100%;
+  height: 76px;
+  padding: 22px;
+  padding-left: 36px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+}
+
+/* inputBox */
+.inputBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  gap: 12px;
+  width: 25%;
+  height: 48px;
+  /* white/white */
+  background: #ffffff;
+  /* gray/200 */
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+}
+.inputBox input {
+  width: 85%;
+  border: none;
+}
+.inputBox input:focus {
+  outline: none;
+}
+
+ .SelectFilter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
+  width: 127px;
+  height: 48px;
+  /* white/white */
+  background: #ffffff;
+  /* gray/200 */
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+}
+.SelectFilter p{
+/* width: 38px;
+height: 20px; */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+color: #64748B;
+
+}
+.SelectFilter:nth-child(4){
+    width: max-content;
+}
+
+
+/* gridBox */
+.gridBox{
+    width: 97%;
+    height: max-content;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    float: right;
+    gap: 25px;
+    background-color: #ffffff;
+    margin-top: 20px;
+}
+
+@media all and (min-width:"768px") and (max-width:"1366px") {
+    .gridBox{
+        width: 97%;
+        height: max-content;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        float: right;
+        gap: 25px;
+        background-color: #ffffff;
+        margin-top: 20px;
+    }
+}
+
+@media all and (min-width:"1080px") and (max-width:"1920px") {
+    .gridBox{
+        width: 97%;
+        height: max-content;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        float: right;
+        gap: 25px;
+        background-color: #ffffff;
+        margin-top: 20px;
+    }
+}
+
+@media all and (min-width:"1920px") and (max-width:"1920px") {
+    .gridBox{
+        width: 97%;
+        height: max-content;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        float: right;
+        gap: 25px;
+        background-color: #ffffff;
+        margin-top: 20px;
+    }
+}

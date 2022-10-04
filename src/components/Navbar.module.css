@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  width: 100%;
+  height: 80px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* left side box */
+.leftbox {
+  width: 60%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  /* border: 1px solid red; */
+  padding-left: 12px;
+  /* justify-content: space-around; */
+}
+
+/* humberburg icon */
+.humberburg {
+  color: #94a3b8;
+  font-size: 26px;
+  /* position: absolute; */
+}
+.TitleImage {
+  height: 48px;
+  width: 48px;
+  /* background-image: url("https://s3-alpha-sig.figma.com/img/bb98/ef0c/cda114daaa8df34a958543d9e824e6fc?Expires=1665964800&Signature=gFzkTA3JYuR19VeYe2I8oUOvTcgOUxI1mSiX7JXxsuRtEx6BIOxxmNY4y4izz8xIX~ZkIGR56ktGSjXo9NH~QChnH4T7xsflGjCkldFBi8WBztGkhVvvh70Cg-iuB9NdRxeKXusdB5EUnXuwJn4LSJ65OuuJxcFeH3EFau4~7OKUFWcTRlR40Dc9zqAVKmjD7pTbpHSpPZheWcOdSwnfQjynlrjgRJEhmPA0rzwA7xSqHssyZdiPezTOakI2I4yQ6EXEyg2H12jBfIFUmi-pbv-uJJl2raVPUA3FBD5Wpj7Z5J-RXspm~vamIX9c-TlrBZDsBMILGBqWG05Ia495EQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"); */
+  border-radius: 26px;
+}
+.logoText {
+  height: 24px;
+  width: 183px;
+  left: 60px;
+  top: 12px;
+  border-radius: nullpx;
+}
+.logoText p {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #2d68fe;
+}
+
+/* Search bar */
+.searchbar {
+  height: 48px;
+  width: 636px;
+  border-radius: 6px;
+  color: #94a3b899;
+  display: flex;
+  align-items: center;
+  color: #94a3b899;
+  gap: 10px;
+  border: 1px solid #94a3b899;
+  padding-left: 12px;
+}
+.searchbar input {
+  height: 24px;
+  width: 384px;
+  left: 44px;
+  top: 12px;
+  border-radius: nullpx;
+  border: none;
+}
+.searchbar input:focus {
+  outline: none;
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #94a3b899;
+  opacity: 1; /* Firefox */
+}
+
+/* Right Side box */
+.rightbox {
+  width: 20%;
+  height: 60%;
+  /* border: 1px solid red; */
+  padding-right: 12px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.connected {
+  display: flex;
+  /* position: absolute; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* padding: 8px 16px; */
+  gap: 4px;
+
+  /* position: absolute; */
+  width: 152px;
+  height: 38px;
+  background: #d1fae5;
+  border-radius: 100px;
+  color: #10b981;
+}
+
+/* .question {
+  height: 60%;
+  width: 20px;
+  border: 1px solid red;
+
+  padding: 5px;
+} */
+
+.avtarBox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.Avtar {
+  height: 28px;
+  width: 26px;
+  /* gray/700 */
+  background: #334155;
+  /* gray/200 */
+  border: 1px solid #e2e8f0;
+  border-radius: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px 10px 15px;
+  /* text-align: center; */
+}
+.Avtar p {
+  font-family: SF Pro Text;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #ffffff;
+}
