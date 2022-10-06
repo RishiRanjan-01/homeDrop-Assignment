@@ -1,5 +1,8 @@
+*{
+  box-sizing: border-box;
+}
 .card {
-  height: 148px;
+  height: 178px;
   background: #ffffff;
   border: 1px solid rgba(173, 173, 173, 0.25);
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.16);
@@ -18,8 +21,8 @@
   width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 10px;
+  /* gap: 5px; */
+  /* padding: 10px; */
 }
 .cancelledPrice {
   text-decoration: line-through;

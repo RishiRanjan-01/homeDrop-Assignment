@@ -31,7 +31,7 @@ const Navbar = () => {
           <span>
             <BiSearch />
           </span>
-          <input type="text" placeholder="Search" />
+          <input type="text" placeholder="Search"  />
         </div>
       </div>
       <div className={styles.rightbox}>

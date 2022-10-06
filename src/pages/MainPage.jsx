@@ -9,81 +9,36 @@ import { AiOutlineAppstore } from "react-icons/ai";
 import { BiSearch } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 import Card from "../components/Card";
+import { useState } from "react";
+import { useEffect } from "react";
+import axios from "axios"
 
 const MainPage = () => {
-  let arr = [
-    {
-      id:1,
-      title:"CADBURY",
-      description:"cardburry bournville",
-      price:110,
-      quantity:56
-    },
-    {
-      id:2,
-      title:"CADBURY",
-      description:"cardburry bournville",
-      price:110,
-      quantity:56
-    },
-    {
-      id:3,
-      title:"CADBURY",
-      description:"cardburry bournville",
-      price:110,
-      quantity:56
-    },
-    {
-      id:4,
-      title:"CADBURY",
-      description:"cardburry bournville",
-      price:110,
-      quantity:56
-    },
-    {
-      id:5,
-      title:"CADBURY",
-      description:"cardburry bournville",
-      price:110,
-      quantity:56
-    },
-    {
-      id:6,
-      title:"CADBURY",
-      description:"cardburry bournville",
-      price:110,
-      quantity:56
-    },
-    {
-      id:7,
-      title:"CADBURY",
-      description:"cardburry bournville",
-      price:110,
-      quantity:56
-    },
-    {
-      id:8,
-      title:"CADBURY",
-      description:"cardburry bournville",
-      price:110,
-      quantity:56
-    },
-    {
-      id:9,
-      title:"CADBURY",
-      description:"cardburry bournville",
-      price:110,
-      quantity:56
-    },
-    {
-      id:10,
-      title:"CADBURY",
-      description:"cardburry bournville",
-      price:110,
-      quantity:56
-    }
-  ]
+  const [query, setquery] = useState("");
+  const [data, setData] = useState([]);
+ 
+  const getData = async() => {
 
+    const res = await axios.get("https://api.homedrop.in/products")
+    // console.log(res.data.data);
+    setData(res.data.data);
+  }
+
+
+  const handleChange = async (e) => {
+    setquery(e.target.value)
+    // console.log(e.target.value);
+    
+    const res = await axios.get(`https://api.homedrop.in/products?search=${e.target.value}`);
+
+    setData(res.data.data)
+  }
+
+
+
+  useEffect(() => {
+    getData();
+  },[])
 
 
   return (
@@ -134,7 +89,7 @@ const MainPage = () => {
             <div className={styles.filerBox}>
               <div className={styles.inputBox}>
                 <BiSearch size={"14px"} color="#0F172A" />
-                <input type="text" placeholder="BrounVille" />
+                <input type="text" placeholder="BrounVille" value={query} onChange={handleChange} />
                 <AiOutlineClose size={"14px"} color="#0F172A" />
               </div>
               <div className={styles.SelectFilter}>
@@ -166,8 +121,8 @@ const MainPage = () => {
              {/* Grid Box */}
              <div className={styles.gridBox}>
               {
-                arr.length > 0 && arr.map((item) => {
-                  return <Card key={item.id}/>
+                data?.length > 0 && data.map((item) => {
+                  return <Card key={item.id} product={item}/>
                 })
               }
              </div>

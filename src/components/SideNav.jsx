@@ -8,12 +8,6 @@ import { TbSpeakerphone } from "react-icons/tb";
 import { SiSimpleanalytics } from "react-icons/si";
 import { IoIosPeople } from "react-icons/io";
 
-
-
-
-
-
-
 const SideNav = () => {
   return (
     <div className={styles.navBox}>
